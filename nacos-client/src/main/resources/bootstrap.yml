@@ -1,0 +1,18 @@
+spring:
+    profiles:
+        active: @env@
+    application:
+        name: nacos-client
+    cloud:
+        nacos:
+            config:
+                contextPath: /nacos
+                namespace: public
+                password: nacos
+                server-addr: 59.110.67.60:8848
+                username: nacos
+                file-extension: yml
+
+server:
+    servlet:
+        context-path: /${spring.application.name}
